@@ -1,0 +1,1 @@
+<?php define("TO_ROOT", "../..");  require_once TO_ROOT . "/core/includes/main.inc.php";    $Page = new Page("Home", "applications", "front");    if(!$_SESSION["user_login_id"])  {  	$Page->goToPage(TO_ROOT . "/apps/landing/login.php");  }     $Page->assign("Apps", Functions::__getApps());  $Page->display();

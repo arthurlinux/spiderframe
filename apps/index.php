@@ -1,0 +1,1 @@
+<?php define("TO_ROOT", "..");  require_once TO_ROOT . "/core/includes/main.inc.php";  $Page = new Page("Admin", "index");  $Page->goToPage("admin/index.php");  $Page->display();

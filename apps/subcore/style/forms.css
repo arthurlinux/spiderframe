@@ -1,0 +1,98 @@
+/* <<<<<<<<<<<<<<<<<<<<  /////////   form_data  ////////////////   >>>>>>>>>>>>>>>>>>>>>>>>>*/
+.form_data .__required 
+{
+	/** * color:red;/** */
+}
+
+.form_data .__required:after
+{ 
+	color:red;
+	font-size:9px;
+	font-weight:lighter;
+	content:" *";
+	/** * content:" * Remember this";/** */
+}
+
+.form_data .error_input
+{
+	color:white;
+	background:red;
+}
+
+.form_data h2
+{
+	margin-left:100px;
+}
+
+.form_data label
+{
+	display:inline-block;
+	text-align:right;
+	min-width:200px;
+}
+.form_data label.radio_label
+{
+	display:inline-block;
+	text-align:right;
+	min-width:20px;
+}
+
+.form_data textarea
+{
+	width:205px;
+	font-size:12px;
+	font-weight:bold;
+	padding:4px 2px;
+	border:solid 1px #d3d3d3;
+	
+  	outline: 0;
+  	/** * color:#ff7f00; /** */
+}
+
+.form_data input[type="text"],
+.form_data input[type="password"]
+{
+	width:205px;
+	font-size:12px;
+	font-weight:bold;
+	padding:4px 2px;
+	border:solid 1px #d3d3d3;
+	outline: 0;
+	
+  	/** * color:#ff7f00; /** */
+}
+
+.form_data input[type="button"]
+{
+	width:208px;
+	margin-top:3px;
+	font-size:14px;
+	border:none;
+	
+	clear:both;
+	height:30px;
+	
+	color:#FFFFFF;
+	background:#27A9E3;
+	text-align:center;
+	line-height:10px;
+	
+	font-weight:bold;
+}
+
+.form_data input[type="submit"]:hover,
+.form_data input[type="button"]:hover
+{
+	outline:none;
+	background:#939DA8;
+}
+
+.form_data .button_first
+{
+	margin-left:205px;
+}
+
+.form_data .actions
+{
+	margin-left:205px;
+}

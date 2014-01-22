@@ -1,0 +1,113 @@
+[__common]
+Hello=>Hola
+Menu=>Menú
+Sorry something is wrong with your data. Please try again or contact your sponsor=>Lo sentimos algo esta mal con tus datos. Por favor intenta nuevamente o contacta a tu patrocinador
+Edit=>Editar
+Delete=>Eliminar
+
+[__index]
+Assistance checker=>Checador de asistencia
+
+[__dictionaries]
+Translate value=>Traducción
+Office=>Oficina virtual
+Add paragraph=>Agregar parrafo
+Add new paragraph in this section=>Agregar nuevo párrafo a esta sección
+Section=>Sección
+New dictionary=>Nuevo diccionario
+New paragraph=>Nuevo párrafo
+Dictionaries=>Diccionarios
+Dictionaries list=>Lista de diccionarios
+Dictionaries tool=>Herramientas de diccionario
+Dictionaries tool=>Herramientas de diccionario
+Dictionary=>Diccionario
+Spanish=>Español
+system=>sistema
+spanish=>español
+System=>Sistema
+Sections=>Secciones
+
+[__alert]
+Assign new user=>Asignar nuevo usuario
+View branch=>Ver sucursal
+
+[__permission]
+Permissions to=>Permisos para
+Permission=>Permiso
+
+[__user_permission]
+User=>Usuario
+Add user=>Agregar nuevo usuario
+Edit user=>Editar usuario
+Inactive user=>Desactivar usuario
+Delete user=>Eleminar usuario
+View user=>Ver usuario
+List user=>Listar usuarios
+View permission=>Ver permisos
+Add permission=>Agregar permiso
+Inactive module permission=>Desactivar módulo
+Add module=>Agregar módulo
+Add module permission=>Agregar módulo de permisos
+Edit module permission=>Editar módulo de permisos
+Edit module=>Editar módulo
+Inactive module=>Desactivar módulo
+
+[__months]
+January=>Enero
+February=>Febrero
+March=>Marzo
+April=>Abril
+May=>Mayo
+June=>Junio
+July=>Julio
+August=>Agosto
+September=>Septiembre
+October=>Octubre
+November=>Noviembre
+December=>Diciembre
+
+[__numbers]
+one=>uno
+two=>dos
+three=>tres
+four=>cuatro
+five=>cinco
+six=>seis
+seven=>siete
+eight=>ocho
+nine=>nueve
+ten=>diez
+eleven=>once
+twelve=>doce
+thirteen=>trece
+fourteen=>catorce
+fifteen=>quince
+sixteen=>dieciseis
+seventeen=>diecicitie
+eighteen=>dieciocho
+nineteen=>diecinueve
+twenty=>veinte
+twenty one=>veintiuno
+twenty two=>veintiuno
+twenty three=>veintiuno
+twenty four=>veintiuno
+twenty five=>veintiuno
+twenty six=>veintiuno
+twenty seven=>veintiuno
+twenty eight=>veintiuno
+twenty nine=>veintiuno
+thirty=>treinta
+forty=>cuanrenta
+fifty=>cincuenta
+sixty=>sesenta
+seventy=>setenta
+eighty=>ochenta
+ninety=>noventa
+hundred=>cien
+thousand=>mil
+
+[__fiscal]
+Asign=>Asignar
+View Compny=>Ver Compañia
+View Client=>Ver Cliente
+Amount=>Monto

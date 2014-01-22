@@ -1,0 +1,345 @@
+/*!
+ *
+ *
+ * Convention to development
+ * spiderFrame - Light Framework v1.0
+ * http://spiderFrame.estilosfrescos.com/
+ *
+ * spiderFramework & spiderFrame
+ * spiderMay @bboymay <may.estilosfrescos@gmail.com>
+ * arthurLinux @arthurlinux <arosbar@gmail.com>
+ *
+ * Provides abstraction of a Page Patterns (Row, Listings, Edit's, Forms, etc..)
+ * @package spiderFrame
+ * @author ArthurLinux <arosbar@gmail.com>
+ * @author spiderMay <may.estilosfrescos@gmail.com>
+ * @author Levhita <levhita@gmail.com>
+ * @copyright Copyright (c) 2010
+ * @release version 1.0 2013-2-4
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @package spiderFrame
+ *
+ * Date: 2007-09-26
+ *
+ */
+
+ =============================================================================================================
+*	This convention gave place between Arturo Osorio and Ismael Cortes on September 26, 2007	 			*
+*	in order to generate a regulatory structuring, development and implementation web projects 				*
+* 	which can be applied to other types of development or applications mobile and desktop.					*
+*																		 									*
+* 	spiderMay @bboymay <may.estilosfrescos@gmail.com>														*
+* 	arthurLinux @arthurlinux <arosbar@gmail.com>				                          					*
+ =============================================================================================================
+ 
+ 
+______________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+
+Convention
+______________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+
+
+Requirements
+
+For anyone who wants a proper function of our system is recommended to work under the Google Chrome web browser,
+Mozilla Firefox version 2.0 minimum, Opera or Safari and javascript enabled anyway.
+
+Install the system and the database on a web server through which you will have access to the same system and 
+the database from anywhere on the network even from anywhere in the world, otherwise the minimum requisition is
+installed in a computer system staff to always be on during working hours and which will access through the 
+local network, the machinery must meet the following minimum hardware and software:
+
+Software
+	Operating System:
+	Mac OSX 9 onwards
+	Linux (all versions except portable)
+	Microsoft Windows (2000, XP, Vista, 7)
+	MySql 5.0
+	PHP 5.3
+	Apache 2.0
+	Google Chrome
+	JavaScript enabled
+	
+Hardware
+	Pentium 4 2.0 G:
+	512 MB RAM
+	5 G in DD
+	Network card 10/100 MB
+
+About Internet explorer
+The Microsoft Internet Explorer is a web browser designed without adequate standards and time away from the 
+quality standards in web design and unintuitive, projects designed on this basis, they usually have enough 
+complications in Internet Explorer versions 7 down, then, built with the highest standards CSS, which is why we 
+are recommended browsers developed under the architecture mainly netscape.
+
+
+The organization of folders
+Normally in a web system had no control over the files, ie classification and location with respect to the above, this project
+and in all that are developed from this school, or culture, the files are sorted and placed as appropriate, for example:
+There is a folder to store the style sheets and their needs, ie images that will be used only in styles, the project
+There is also a folder to hold all the js scripts or libraries, scripts and his name is different contains folders that store
+different libraries according to their origin.
+There is also a folder named models, which contains classes as the builder of the tables in the database which will be modified
+at any time since the php code and therefore requires its kind for proper operation.
+
+There is a folder called classes that stores the different classes to build the necessary forms throughout the school system or this
+required.
+One more for the functions folder, connection and query functions, among others.
+There is a folder for documentation, and everything needed to make the project work, both locally and on the internet
+There is a folder to store and sort the images in subfolders to be stored in the system and are not specific to the styles of this
+In addition there is a folder called vendors, which contains necessary to run the ajax and is updated, in addition to storing
+  Script libraries outside the native development
+There is also a folder called efrescos in scripts which are stored most common routines, such as: the login and logout
+users and common operations on databases such as; Save and Edit
+A license folder to place all licenses in case of using libraries or applications that need them.
+It has a middle name folder is used to store files in folders for audio, video, documents, etc..
+It has the Templates folder where templates are stored to keep the content of each page and each is accessed by
+variable '$ page'.
+It has a folder called languages ​​that stores language translation dictionaries specific to plain text files
+And finally generate the necessary folders to the needs of each system.
+
+The working and shift
+The way in which this project serves to achieve better performance, and if not, at least for good and intuitive organization
+file is:
+It works with templates, files (. Tpl.php) in which only appears right through the HTML tags and php code, and presentation of
+previous query results into objects of type array variables and calls to the functions required javascript or ajax, (in very
+ends creates a javascript function within this file. tpl.php), contained in the folder Templars. Placed on the Index consultations
+the database through a switch depends on the page you want to view and variables are constructed for presenting the results.
+
+Variables
+Variables that are used in the system are few and take many values ​​depending on the need.
+Have been classified to achieve an intuitive logic, as follows:
+
+- $ Login_id: This is one of the most important because it store the user currently logged into the system currently.
+
+- $ Who_id: Refers to the id of a table that we want to touch and will link to the other with this as the main, and that having
+a database may be located hundreds of tables so as few and as we do not know with certainty always
+to begin designing the database are linked with a who_id for such reference.
+
+- $ User_id: Sometimes you need the $ who_id to refer to other objects and so it requires an identifier
+user, in such cases the two ends are used, the $ who_id for another object x, and the $ user_id user who
+you want to refer
+
+- $ Type_x: All data can be any type of data or different data, but they rarely use more than two in one
+task, so this variable is used to assign different tasks xa data. for example the name of a field to be edited, and,
+ for many other things and many other cases in which it is sometimes difficult to invent a concise name to refer to a variable.
+
+- $ Task: The latter stores do what you want to do from a decision, for example, referring to a
+user, what you want to do?, delete, edit, register it, among others.
+
+- $ Validate This variable is used to send and receive a form to do if you already know this validated information is saved, otherwise
+overlooked and is redirected if necessary or go to the next procedure.
+
+- $ Field This variable refers to the field in a table that is to be changed by aja
+
+- $ Path This variable refers to the path of a file to be deleted or the path to where you want to go after
+perform some process.
+
+- $ Row This is a unique variable should be used only to refer to the models needed to edit a table.
+
+- $ List This is an array to store anything in the necessary and directly accessible by cycle or by position.
+
+- $ Count: In normal cycles using a $ i $ j in conventional programming, this is simply a concise reference
+you are using a counter for some task, in addition to the conventional variables $ i, $ j, $ k, $ l, $ m.
+
+- $ Count_x: In very specific cases requires two counters or accumulators, so that the latter refers to a secondary counter.
+
+- $ Version This variable is to keep the system version on which you are working.
+
+- $ Page is implemented as of version 3.0, is the page you want to view.
+
+- $ Window As of version 3.0 are implemented popups therefore this variable is used to find out which type of window
+will open the new request, although it is not widely used variable.
+
+- $ Where From version 3.1 are implemented search variables, therefore this variable is used to determine where to place the results
+search request.
+
+- $ Class_x From version 3.1 are implemented results listings, thus this variable is used in addition to the variables:
+"$ Type_x" and "$ task".
+
+Thus these variables are used throughout the system for different cases or situations data, of course, there are others that
+do not mess with the name but is referred accurate or precise what is required, but usually these 17 are the most commonly used.
+In addition to the variables used numbers should not be but the name of the variable and if needed another with the same name then the same "_x"
+
+Variables of type Arrays
+Normally you do not need many variables of type array, because there are already arrays intended query and data most
+obtained from the database, thus fulfilling one of our programming rules "Do not repeat yourself", and if for example, you require a data list
+extract and store is preferred for its ease of modification in a database in an array in the case of very large or if it will require more
+than once, otherwise or for example in ajax file using arrays in two different varibles $ list to refer to a list
+$ list_x important for the list of minor or second term if required in the same function and was used as the first variable.
+
+Arrays
+Arrays are the heart of this system, so it is necessary to have total control over them, it is the best way in which data is collected and stored.
+
+Ajax
+Ajax is the technology we use to make changes to the database and return without reloading or without reloading the entire page, just as
+Importantly, these functions are executed in a file called ajax.server.php located inside the folder includes, how to use it is simple;
+establishing a connection to the database, the query is made, is made routine and returns the result to where the request was made, and
+new values ​​through a objResponse and the function declaration at the end of the document.
+
+Active
+The active are enum type fields with values ​​'1 'and '0' to indicate which is the state of an object in a database, 1 for active and 0 for inactive
+these values ​​are changed to EditField function which will send the following parameters:
+EditField ($ DbConecction, $ table, $ who_id, $ field, $ value)
+- $ Table: the table is amended
+- $ Who_id: What is the id that change state
+- $ Field: Which field is modified
+- $ Value The value to be stored in that register.
+
+The connection to the database
+To connect to the database must first verify that the database exists, if not exist within the folder
+documentation is on file. zipped sql where is the script to create the database, with all or at least
+Tables that are essential for a project start.
+Once verified the previous step is passed to check the connection parameters, which are on file main.in.php included within the
+includes folder, the connection parameters are:
+$ Localhost = 'localhost', this is the server, usually this parameter should not be changed
+$ User_root = 'root', this is the user's pointer on the working database
+$ Local_pass = 'root', this is the password (password) for the above user
+$ Name_root = 'base', and finally the database to which you will connect the project
+
+Draw
+The tables are called the common name in the singular, ie if a table is required to store the table called cars Cart
+
+Fields
+The first field in a table is called the table name + _id, to follow the example of the above table the first field would carro_id, index type, integer
+of length 10, auto-incrementing, with key action.
+When variables are records in a table that is, delete records needed as in the case of users or messages, helps active field takes
+which is the last field in the table, enum type with values ​​'1 ', '0' by default 0
+Fields should be organized in the table under the parameter of importance or following hierarchy:
+numerical
+char or text
+date
+enum
+
+The field who_id
+Who_id field in a table is an identifier to link tables, as it is not a particular characteristic of any table is fairly intuitive and comfortable when
+work tables linked through this field, eg login table exists, image and the address table as follows:
+| ============== | | ============== | | ============= |
+| 				 | | 				| | 			  |
+| Login_id 		 | | address_id 	| | image_id 	  |
+| Nick 			 | | who_id 		| | who_id 		  |
+| Pass 			 | | Street 		| | image		  |
+| 				 | | 				| | Image_type    |
+| ============== | | =============  | | ============= |
+
+$ Sql ​​= "SELECT * FROM login, address, image
+WHERE address.who_id = login.login_id
+AND image.who_id = login.login_id
+AND image.image_type = 'who' ";
+
+reaches as seen in the example tables are joined based on the field who and images are classified into types of images giving a who for
+people, so you could link any table without making a specific reference to a field in another table content, which in turn eliminates various error factors.
+
+Consultations
+Appreciate Similarly as in the previous example query is easy to distinguish between the SQL Query statements and characteristic of the alien elements which in this case
+are the table names in lowercase.
+Throughout the project, this structure must be maintained simply by the desire to always be organized and make it easier to display errors
+or even view the result from this code may throw a sentence.
+
+Updates regarding the latest version of previous
+
+Version 3.0
+- Integrates the AJAX v 2.1, changing the allocation methods in ajax.server.php
+- Removed php design rule: "For each table in the database model is needed in PHP (model builders are single)" and create a single
+flexible model to create the global variable "$ table" which stores the name of the table to modify.
+- Build flexible storage algorithm routines in the folder with the name guardar.php
+function is implemented from this version, easy editing and saving new records in any table, indicating the directions from the
+file where the form is implemented, and meeting lists and variables needed to avoid generating more specific code to store
+or edit various fields in any table, following the rules of specification:
+- $ List - the list is way Array of Arrays of tables and fields that will be affected
+- $ Lista_serialize - is this same above list serialized to post the data by the method "post"
+- The fields should be called the same name as the fields are database where data is stored
+- Tables should be called singular
+- The first field is the name of the tabla_id
+- Pasword type fields will be validated and encrypted in md5
+- The fields of type secret, secret function call which dynamically generates the secret
+- The fields of type file are logically selected as the file extension and which is stored in an array prior
+- Flexible script is generated to validate fields on a form; rules:
+- Requires the list of fields to validate the type of validation of each field,
+(Currently only exist validation types: empty, mail, number and confirm)
+- Variables are duplicated in the main connection, for comment is not used as work; locally or on the Internet.
+- Inclination for the tables with collation utf8_unicode_ci mysam type
+
+Version 3.1
+- Removed the folders to store different files. Php and within each folder a subfolder of templates, now all templates
+are stored in the folder of templates and access them from the index.php via a switch with variable page
+- Added the media folder that are stored in different files classified by type.
+- Scripts are stored in folders stored third in the main folder of scripts
+- They integrate jquery libraries and other outsiders are removed causing conflicts
+- Added the top right corner with the link to mozilla firefox browser to promote more friendly and multi-platform
+- Integrates permission to print in the main permission Array, converting binary groups quartets to quintets
+- Popups are implemented for quick records storage.
+- Integrates the contact table in the database, which stores various phones, emails or a user's url, by removing these system fields
+previous static in that only stored a phone, email and url of each user.
+- Implemented the class to run php mailer sending mail to servers with complicated standards like hotmail
+- Nick is eliminated as a method for validating the login and create the algorithm for loqueares by email us with the clause:
+contacto.contacto_key = 1 in the contact table
+- It creates and implements checarCorreo function, which validates the email to be the type az ,0-9, (-_.) @ Az.az
+- The Delete permission in the permissions table is changed to Active name, which refers to the same permission by another name,
+more appropriate to its function, since it really is affecting the field in a database
+- The query is generated modules permits and are created from this, dynamic variables created from the query, leaving behind having
+that generate this call manually to get the permissions of each module and its variables
+- It creates the variable "$ class_x"
+- Variables are generated "$ end, $ delta and $ start" which have no place from queries for paginating results
+$ Start: where the consultation begins
+$ Delta: the range that the query will
+$ End: where consultation, which is the sum of $ start + $ delta
+
+Version 3.2
+- Added support for multiple connections to databases
+- Was removed from the context of programming language in Spanish and translated into English as much as possible
+- All variables are now called in its English translation
+- The names of tables and database fields were changed into English
+- Removed the folder "routines" and those files are moved to the folder "scripts"
+- Integrates class translator which translates the visual context of English to Spanish
+- It creates a folder that stores languages ​​translation dictionaries
+
+Design Rules
+
+Database Design
+• All tags are in lowercase
+• php tags "<? Php" to open code "<? =" Print only required if
+
+Database Design
+• All lowercase.
+• Tables only singular.
+• primary identifier (key) is the name "tabla_id".
+• The field order: 1st. More important, all who are "nombre_id", 2nd. Major field (main), 3rd. Second largest,
+4to. Text or number, 5th. dates, 6th Enum, 7th turn.
+• Thinking classes (abstract).
+• No more than 15 fields per table.
+• If more fields are required to analyze the data separation in most tables.
+• All tables and databases "utf8_unicode_ci" mysam.
+
+Design in PHP
+• Do not repeat (not repeat code).
+• Function if repeated more than 2 times.
+• Everything is lowercase.
+• Folder Names in lowercase.
+• Complex queries are made in. Php unless otherwise required. Tpl.php
+• The outcome of the consultation is on file. Tpl.php.
+• All decisions are made in consultation words are capitalized except the fields and tables.
+• Think and divide classes (abstract).
+• Always keep the same structure and order.
+• The name of the variables, files, classes, tables or folders that requires space is replaced by a "_".
+
+Visual design
+• Working with layers, vectors and objects separately.
+• 300px per inch resolution.
+• Colors in RGB.
+• Bigger is better.
+• Simpler is better.
+• Exports to do. Gif with alpha transparency or. PNG 32 with alpha transparency.
+• Png is highly recommended.
+
+=======================================================================
+* Contact 																*
+* Any questions or condition and related to this project and convention *
+* Contact the developers of this methodology in the box: 				*
+* 	spiderMay @bboymay <may.estilosfrescos@gmail.com>					*
+* 	arthurLinux @arthurlinux <arosbar@gmail.com>						*
+=======================================================================
+
+

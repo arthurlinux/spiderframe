@@ -1,0 +1,20 @@
+<h2>Saludos {Names}:</h2>
+
+<p>Para activar su cuenta haga click en el siguiente enlace: <br />
+{Link} 
+</p>
+
+<p>o bien copie y pegue el enlace en la barra de direcciones de su navegador:<br />
+{LinkAgain}
+</p>
+
+<p>Una vez en el sitio de activación siga los pasos, y su cuenta quedará activada.</p>
+
+<p>Si no le es posible, puede activar su cuenta contactando al equipo 
+de soporte mediante el siguiente correo electronico:<br />
+{support@mail}
+</p>
+
+
+<p>Este correo llega a usted por medio del sistema de atención a Clientes 
+Estaremos en contacto constante para dar un mejor seguimiento.</p>

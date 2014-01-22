@@ -1,0 +1,174 @@
+Tareas urgentes
+	//Actions x tab
+	//General actions en tabs
+	Add Member
+	Member account
+	Network Member View
+	
+	Class Galery
+	Class Detail Galery
+	Subir Imagen
+	Tomar Foto
+	Calificar imagenes
+	Class Calendario
+	Mensajes
+	Administrar catalogo de imagenes
+	Administrar imagenes
+	Catalogo de tipos de mensaje
+	
+	Active action
+	Aplicar permisos
+	Documentar clases
+	Documentación del sistema
+	
+Template 
+	optimizar addCss para que no se repita un archivo de css
+	Optimizar metodos de href y add rows
+	
+Page
+	//Optimizar Page para que herede de Template
+	
+Row 
+	getPackage
+		Modular los campos con la estructura de propiedades necesarias como un sturdyrow
+	LoadPackage
+	
+
+Usuario
+	//Listar usuarios
+	//Editar Usuario
+	//Asignar roles
+	//Asignar permisos
+	//Eliminar permisos
+	Mostrar Perfil
+	Crear cuenta de miembro
+	Active Action & Active User
+	Settings default
+	Edit Settings
+	Search user_rol = all, admin, user
+	Busqueda inteligente de usuarios
+	Exportar 
+		Excel
+		PDF
+		Word
+	
+Member
+	Listar socios
+	
+Config Manager Assistent
+	Read & write Config
+
+Diccionario
+	//Nuevo Diccionario
+	//Ver Diccionario
+	//Eliminar diccionario
+	//Listar Diccionarios
+	//Nuevo Parrafo
+	//Editar Parrafos
+	//Eliminar Parrafos
+	Segmentar en Javascript por secciones
+	Exportar 
+		Excel
+		PDF
+		Word
+	
+Roles
+	//Agregar
+	//Editar
+	//Listar
+	//Ver
+	Eliminar
+	Exportar 
+		Excel
+		PDF
+		Word
+	
+Module Permisos
+	//Agregar
+	//Editar
+	//Ver
+	//Listar
+	Eliminar
+	Exportar 
+		Excel
+		PDF
+		Word
+
+Module Shortcuts
+	Agregar
+	Eliminar
+	Editar
+	Ver
+	Listar
+	Exportar 
+		Excel
+		PDF
+		Word
+
+Info System
+	Generar info del framework
+	Agregar convención
+	Documentar funciones
+	Generar manual de usuario de framework
+	Generar manual de usuario de sistema
+
+Pattern
+	Tabs
+		//Actions x tab
+		//General action
+		Tabla doble
+	Deatil
+		//listing
+		Agregar imagen
+		
+	Table
+		Order filters
+		Search
+		Ordenar methodos 
+			AddRow->Agrega un renglon completo
+			AddColumn->Agrega una columna completa, una celda en cada row
+			AddCell->Agrega una celda en un renglon y una columna
+			Mejorar la aplicacion de columnas, titulos x columna y sus propiedades
+			Crear rutinas para setear las propiedades de la tabla x titulos, columnas, renglones y celdas
+			Crear rutinas para 
+					Ocultar: Celdas, Renglones, Columnas, Titulos
+					Mostrar: Celdas, Renglones, Columnas, Titulos
+					Eliminar:Celdas, Renglones, Columnas, Titulos 
+					
+	Template [general templates ]
+		Function Mover contents
+
+	Documentar los patterns principlamente el Table
+	Fixear los patterns, principlamente el Template
+	
+
+Iconos de los messages en header
+Aplicacion de messages en header en todas las aplicaciones
+Aplicacion de permisos en todos las aplicaciones
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+

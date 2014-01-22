@@ -1,0 +1,30 @@
+[__common] 
+Hello=>Hola
+Easy=>Fácil
+days=>días
+Ok=>Ok
+Save=>Guardar
+Cancel=>Cancelar
+Logout=>Cerrar sessión
+Code key=>Código clave
+Forgot your password?=>¿Olvidaste tu password?
+The field names is invalid data. Check please=>La información del campo nombre es inválida. ¡Revisalo por favor!
+The field lastname is invalid data. Check please=>La información del campo apellido es inválida. ¡Revisalo por favor!
+The e-mail is incorrect. Check please=>El e-mail es incorrecto. ¡Revisalo por favor!
+
+[__index]
+The medical history of your patients in 123=>El historial médico de tus pacientes en 123
+Useful=>Usable
+Quick=>Rápido
+Easy=>Fácil
+
+[__office]
+Lifetime of the code keys=>Tiempo de vida de las claves
+Virtual office=>Oficina virtual
+Your licenses are valid for=>Tus licencias son válidas para
+
+[__edit_user]
+Edit profile=>Editar perfil
+
+[__dictionaries]
+Office=>Oficina de leyes virtual
