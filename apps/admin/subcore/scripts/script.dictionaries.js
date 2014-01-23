@@ -62,7 +62,7 @@ function confirm_delete_dictionary_word(id)
 function delete_dictionary(language)
 {
 	var dataForm = "language=" + language;
-	var returnData = __sendRequest({"url": "../admin/subcore/application/delete_dictionary.php", "dataForm": dataForm,"type":"POST"});	
+	var returnData = __sendRequest({"url": "../../core/application/delete_dictionary.php", "dataForm": dataForm,"type":"POST"});	
 	
 	if(returnData.success == 1)
 	{ 
@@ -89,7 +89,7 @@ function delete_dictionary_word(attr_id)
  	var id  		= attr_id[1];
 
 	var dataForm = "language=" + language + "&id=" + id;
-	var returnData = __sendRequest({"url": "../admin/subcore/application/delete_dictionary_word.php", "dataForm": dataForm,"type":"POST"});	
+	var returnData = __sendRequest({"url": "../../core/application/delete_dictionary_word.php", "dataForm": dataForm,"type":"POST"});	
 	
 	if(returnData.success == 1)
 	{ 

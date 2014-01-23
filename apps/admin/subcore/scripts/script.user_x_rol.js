@@ -42,7 +42,7 @@ function set_rol(id, checked)
 	
 	$("#" + id).attr("id", new_id);
 	
-	var returnData = __sendRequest({"url": "../admin/subcore/application/set_rol.php", "dataForm": dataForm,"type":"GET"});
+	var returnData = __sendRequest({"url": "../../core/application/set_rol.php", "dataForm": dataForm,"type":"GET"});
 	
 	
 	if(returnData.reason == "INVALID_TOKEN") 

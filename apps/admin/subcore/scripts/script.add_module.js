@@ -46,7 +46,7 @@ function add_module()
 	if(module.val() != "")
 	{
 		var dataForm = $("#eForm").serialize();
-		var returnData = __sendRequest({"url": "../subcore/application/save_row.php", "dataForm": dataForm,"type":"POST"});	
+		var returnData = __sendRequest({"url": "../../core/application/save_row.php", "dataForm": dataForm,"type":"POST"});	
 		
 		if(returnData.success == 1)
 		{ 

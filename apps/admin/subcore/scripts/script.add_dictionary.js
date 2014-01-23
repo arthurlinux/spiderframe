@@ -32,7 +32,7 @@ function add_dictionary()
 	if(language.val() != "")
 	{
 		var dataForm = $("#dictionary_form").serialize();
-		var returnData = __sendRequest({"url": "../admin/subcore/application/add_dictionary.php", "dataForm": dataForm,"type":"POST"});	
+		var returnData = __sendRequest({"url": "../../core/application/add_dictionary.php", "dataForm": dataForm,"type":"POST"});	
 		
 		if(returnData.success == 1)
 		{ 

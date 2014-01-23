@@ -57,7 +57,7 @@ function add_dictionary_word(system_value, translate_value)
 	if(system_value.val() != "" && translate_value.val() != "")
 	{
 		var dataForm = $("#dictionary_form").serialize();
-		var returnData = __sendRequest({"url": "../admin/subcore/application/add_dictionary_word.php", "dataForm": dataForm,"type":"POST"});	
+		var returnData = __sendRequest({"url": "../../core/application/add_dictionary_word.php", "dataForm": dataForm,"type":"POST"});	
 		
 		if(returnData.success == 1)
 		{ 

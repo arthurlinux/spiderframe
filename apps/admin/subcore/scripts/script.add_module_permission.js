@@ -55,7 +55,7 @@ function add_permission()
 		permission_context.val(permission_context_text);
 		
 		var dataForm = $("#eForm").serialize();
-		var returnData = __sendRequest({"url": "../subcore/application/save_row.php", "dataForm": dataForm,"type":"POST"});	
+		var returnData = __sendRequest({"url": "../../core/application/save_row.php", "dataForm": dataForm,"type":"POST"});	
 		
 		if(returnData.success == 1)
 		{
