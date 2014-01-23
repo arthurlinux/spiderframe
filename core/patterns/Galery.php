@@ -22,8 +22,8 @@ class Galery extends Template
 	    
 	    parent::setMainMenu();
 	  	parent::setSecondaryMenu();
-	  	parent::addCssLink(TO_ROOT . "/apps/subcore/style/galery.css");
-	  	parent::addCssLink(TO_ROOT . "/apps/subcore/style/jquery.ui/fancybox/jquery-fancybox.css");
+	  	parent::addCssLink(TO_ROOT . "/core/style/galery.css");
+	  	parent::addCssLink(TO_ROOT . "/core/style/jquery.ui/fancybox/jquery-fancybox.css");
 	  	
 	  	parent::addJsLink(TO_ROOT . "/core/jquery/jquery.fancybox.js");
 	  	

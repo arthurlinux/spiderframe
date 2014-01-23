@@ -1,0 +1,21 @@
+/* Styles not related to code  */
+
+body, td {
+    font: 14px/1.3 verdana, arial, helvetica, sans-serif;
+    }
+h1 {
+    font-size:1.3em;
+    margin: 1em 0 1.4em;
+    }
+a:link {
+    color:#33c;
+    }
+a:visited {
+    color:#339;
+    }
+ul {
+    margin:1.4em 0 2em;
+    }
+ul li {
+    margin-bottom:.8em;
+    }

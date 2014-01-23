@@ -23,30 +23,7 @@ $(document).ready(function() {
 	
 	var user_sponsor_id = $("input[data-id='user_sponsor_id']");
 	
-	var availableTags = [
-	                     "ActionScript",
-	                     "AppleScript",
-	                     "Asp",
-	                     "BASIC",
-	                     "C",
-	                     "C++",
-	                     "Clojure",
-	                     "COBOL",
-	                     "ColdFusion",
-	                     "Erlang",
-	                     "Fortran",
-	                     "Groovy",
-	                     "Haskell",
-	                     "Java",
-	                     "JavaScript",
-	                     "Lisp",
-	                     "Perl",
-	                     "PHP",
-	                     "Python",
-	                     "Ruby",
-	                     "Scala",
-	                     "Scheme"
-	                   ];
+	var availableTags = new Array();
 	
 	$("#save").click(function(){
 		//$("#eForm").submit();
@@ -267,20 +244,20 @@ $(document).ready(function() {
  		rfc.val(rfc_generator());
  	});
 
- 	/** *
+ 	/** */
  	user_sponsor_id.keyup( function () {
  		var value = this.value;
  		
  		if(parseInt(value) >= 1 )
  		{
- 			alert(value);
+ 			
  		} else {
- 			alert("buscar por letra");
+ 			availableTags = $.setAutoComplete();
  		}
  	});
  	/** */
  	
- 	user_sponsor_id.spiderComplete("hola");
+ 	user_sponsor_id.autocomplete({"source":availableTags});
  	
  	function rfc_generator()
 	{

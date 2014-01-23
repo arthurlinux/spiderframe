@@ -313,7 +313,7 @@ class Functions
 	public static function __getApps() 
 	{
 		$apps_path = TO_ROOT . "/apps";
-		$hidden_files = array(".", "..", ".DS_Store", "subcore", "landing");
+		$hidden_files = array(".", "..", ".DS_Store", "landing");
 			
 		return self::__getFolders($apps_path, $hidden_files);	  
   	}

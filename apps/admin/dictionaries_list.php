@@ -20,7 +20,7 @@
   
   
   /* ---------------- <<<< Configure CSS Theme >>>> ----------------------------------------------------------------------*/
-  $Page->addCssLink(TO_ROOT . "/apps/subcore/style/tables.css");
+  $Page->addCssLink(TO_ROOT . "/core/style/tables.css");
   /* ---------------- <<<< End Configure CSS Theme >>>> ------------------------------------------------------------------*/
   
   

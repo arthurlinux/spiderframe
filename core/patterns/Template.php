@@ -176,7 +176,7 @@ class Template
   			{ 
   	  	  	  	$this->_template = "templates/{$template}.tpl.php";
   	  	 	} else {
-  	  	 		$this->_template = TO_ROOT . "/apps/subcore/templates/default_template.tpl.php";
+  	  	 		$this->_template = TO_ROOT . "/core/templates/default_template.tpl.php";
   	  	 		$this->setMessage("SORRY_ONE_OF_THE_TEMPLATES_YOU_ARE__LOOKING_FOR_WAS_NOT_FOUND", "failure");
   	  	 	}
   		 }
@@ -202,10 +202,10 @@ class Template
 	  	  	}
   		}
   		
-  		if ( file_exists(TO_ROOT . "/apps/subcore/layouts/" . $layout . "_layout.tpl.php") ) {
-  	  	  	  	$this->_layout = TO_ROOT . "/apps/subcore/layouts/" . $layout . "_layout.tpl.php";
+  		if ( file_exists(TO_ROOT . "/core/layouts/" . $layout . "_layout.tpl.php") ) {
+  	  	  	  	$this->_layout = TO_ROOT . "/core/layouts/" . $layout . "_layout.tpl.php";
   	  	} else {
-  	  	 	$this->_layout = TO_ROOT . "/apps/subcore/layouts/default_layout.tpl.php";
+  	  	 	$this->_layout = TO_ROOT . "/core/layouts/default_layout.tpl.php";
   	  	} 
   	  	
   	  	return true;
@@ -227,9 +227,9 @@ class Template
   	  	$section_section_name 	= TO_ROOT. "/apps/" . $this->_app . "/subcore/navs/" . $this->_section . "_" . $level . "_menu.tpl.php";
   	  	$application_app_name 	= TO_ROOT. "/apps/" . $this->_app . "/subcore/navs/" . $this->_app . "_" . $level . "_menu.tpl.php";
   	  	$application_default_app= TO_ROOT. "/apps/" . $this->_app . "/subcore/navs/default_" . $this->_app . "_" . $level . "_menu.tpl.php";
-  	  	$subcore_menu_name 		= TO_ROOT. "/apps/subcore/navs/" . $menu_name . "_" . $level . "_menu.tpl.php";
-  	  	$subcore_app_name 	 	= TO_ROOT. "/apps/subcore/navs/" . $this->_app . "_" . $level . "_menu.tpl.php";
-  	  	$default_nav  		 	= TO_ROOT. "/apps/subcore/navs/default_" . $level . "_menu.tpl.php";
+  	  	$subcore_menu_name 		= TO_ROOT. "/core/navs/" . $menu_name . "_" . $level . "_menu.tpl.php";
+  	  	$subcore_app_name 	 	= TO_ROOT. "/core/navs/" . $this->_app . "_" . $level . "_menu.tpl.php";
+  	  	$default_nav  		 	= TO_ROOT. "/core/navs/default_" . $level . "_menu.tpl.php";
   	  		
   	  	ob_start(); 
   	  		

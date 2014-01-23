@@ -18,7 +18,7 @@ class Autoloader
   	{
 	    $path = TO_ROOT . "/apps";
 		$file_name = $class_name . ".php";
-	    $hidden_files = array(".", "..", ".DS_Store", "subcore");
+	    $hidden_files = array(".", "..", ".DS_Store");
 		$apps = self::getAppFolders($path, $hidden_files);
 		
 	    $general_paths = array(
@@ -27,7 +27,7 @@ class Autoloader
 				        TO_ROOT . "/core/patterns/",
 				        TO_ROOT . "/core/config/",
 				        TO_ROOT . "/core/models/",
-				        TO_ROOT . "/apps/subcore/models/"
+				        TO_ROOT . "/apps/admin/models/"
 	    );
 	  	
 		if($apps)

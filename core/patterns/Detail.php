@@ -27,7 +27,7 @@ class Detail extends Template
 	    parent::setMainMenu();
 	  	parent::setSecondaryMenu();
 	  	$this->_container_properties = array( "id"=>"table_view", "class"=>"table_view" );
-	  	parent::addCssLink(TO_ROOT . "/apps/subcore/style/tables.css");
+	  	parent::addCssLink(TO_ROOT . "/core/style/tables.css");
 	  	parent::setTemplate(TO_ROOT . "/core/patterns/templates/Detail.tpl.php", true);
   	}
 	

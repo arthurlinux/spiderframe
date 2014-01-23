@@ -4,6 +4,13 @@ Menu=>Menú
 Sorry something is wrong with your data. Please try again or contact your sponsor=>Lo sentimos algo esta mal con tus datos. Por favor intenta nuevamente o contacta a tu patrocinador
 Edit=>Editar
 Delete=>Eliminar
+Logout=>Cerrar sesión
+Wellcome=>Bienvenido
+Home=>Inicio
+Actions=>Acciones
+Save=>Guardar
+Cancel=>Cancelar
+Home admin=>Administrador principal
 
 [__index]
 Assistance checker=>Checador de asistencia
@@ -26,6 +33,13 @@ system=>sistema
 spanish=>español
 System=>Sistema
 Sections=>Secciones
+System value=>Valor en el sistema
+Add dictionary=>Agregar diccionario
+View dictionary=>Ver diccionario
+Admin dictionaries=>Administrar diccionarios
+The dictionary data has been saved correctly=>Los datos del diccionario se han guardado correctamente
+Add dictionary paragraph=>Agregar párrafo en el diccionario
+Edit dictionary paragraph=>Editar párrafo en el diccionario
 
 [__alert]
 Assign new user=>Asignar nuevo usuario
@@ -108,6 +122,4 @@ thousand=>mil
 
 [__fiscal]
 Asign=>Asignar
-View Compny=>Ver Compañia
-View Client=>Ver Cliente
-Amount=>Monto
+Client=>Cliente

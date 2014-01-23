@@ -1,1 +1,0 @@
-<?php define("TO_ROOT", "../../..");   require_once TO_ROOT . "/core/includes/main.inc.php";    $Page = new Page("Home", "logout", "front");    Functions::__sessionDestroy();    $Page->goToPage(TO_ROOT . "/index.php");  $Page->display();    $Page->display();

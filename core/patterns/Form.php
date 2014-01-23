@@ -46,7 +46,7 @@ class Form extends Template
 	  	parent::setSecondaryMenu();
 	  	$this->__loadSturdyRowsLevels();
 	  	$this->_container_properties = array( "id"=>"eForm", "name"=>"eForm", "class"=>"form_data" );
-	  	parent::addCssLink(TO_ROOT . "/apps/subcore/style/forms.css");
+	  	parent::addCssLink(TO_ROOT . "/core/style/forms.css");
 	  	parent::setTemplate(TO_ROOT . "/core/patterns/templates/Form.tpl.php", true);
   	}
 	

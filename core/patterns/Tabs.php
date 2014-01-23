@@ -26,9 +26,9 @@ class Tabs extends Template
 	    
 	    parent::setMainMenu();
 	  	parent::setSecondaryMenu();
-	  	parent::addCssLink(TO_ROOT . "/apps/subcore/style/tabs.css");
-	  	parent::addCssLink(TO_ROOT . "/apps/subcore/style/tables.css");
-	  	parent::addJsLink(TO_ROOT . "/apps/subcore/scripts/script.tabs.js");
+	  	parent::addCssLink(TO_ROOT . "/core/style/tabs.css");
+	  	parent::addCssLink(TO_ROOT . "/core/style/tables.css");
+	  	parent::addJsLink(TO_ROOT . "/core/scripts/script.tabs.js");
 	  	parent::setTemplate(TO_ROOT . "/core/patterns/templates/Tabs.tpl.php", true);
   	}
 	
