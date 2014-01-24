@@ -20,7 +20,7 @@ function __showMessage(params)
 	if(!__isArray(params))
 	{
 		temp_params = params;
-		params = {"message":"<image id='__loader' src='../../core/style/images/loading_bubble.gif'>", "buttons": false,"level":false}
+		params = {"message":"<image id='__loader' src='../../core/style/images/loading_bubble.gif'>", "buttons": false,"level":false};
 	}
 	
 	var options = true;
@@ -267,43 +267,6 @@ function __sendRequest (params)
 	return returnData;	
 }
 
-function __uploadImage (params)
-{
-	var returnData = false;
-	var url = (params.url != "" ) ? params.url : "../../core/application/upload.php" ;
-	var dataForm = (params.dataForm != "" ) ? params.dataForm : false;
-	var dataType = (params.dataType != "" ) ? params.dataType : "json";
-	
-	$.ajax({
-		url:url,
-		type:"POST",
-		contentType:false,
-		data:dataForm,
-		processData:false,
-		cache:false
-	}); 
-}
-
-function __saveRow(params)
-{
-	var url = (params.url) ? params.url : "../../core/application/save_row.php";
- 	url = url+"?id="+params.id+"&row="+params.row;
-	//alert(url);
-	return __sendRequest ({"url":url, "dataForm":params.dataForm,"message_loader":params.message_loader,"loader":params.loader});
- }
- 
-function __changeField(params)
-{
-	var id = (params.id) ? params.id : false;
-	var row = (params.row) ? params.row : false;
-	var value = (params.value) ? params.value : "0" ;
- 	var token = (params.token) ? params.token : false;
-	var field = (params.field) ? params.field : "active";
- 	var url = (params.url) ? params.url : "../../core/application/change_field.php";
- 	//alert("hola");
-	return __getFileJSON(url+"?token="+token+"&id="+id+"&row="+row+"&field="+field+"&value="+value);
- }
-  
 function __getUrlGet(getParam)
 {
  	var href = $(location).attr("href");
@@ -447,47 +410,6 @@ function __translate(word)
 	return word;
 }
 
-function __activeAction (className) 
-{ 
-	className = (className) ? className : "active_action" ; 
-	
-	$("."+className).bind("click",function() { 
-		var element = $(this); 
-		var attr_id = element.attr("id");
-		 	attr_id = attr_id.split("-");
-		var row  	= attr_id[0];
-		var field  	= attr_id[1];
-		var data 	= attr_id[2].split("_");
-		var id 		= data[0];
-		var value 	= data[1];
-		var inverse	= (value == 1) ? 0 : 1;
-		var inverse_value = (value == 1) ? "Inactive " : "Active " ; 
-		var new_id	= attr_id[0] + "-" + attr_id[1] + "-" + id + "_" + inverse; 
-		var value_x = element.html().substring(element.html().indexOf(" ") + 1);
-		var html 	= inverse_value + value_x;
-		var parent_id =  "container-" + attr_id[0] + "-" + id;
-		var new_class = (value == 1) ? "" : "inactive_item";
-		var old_class = (value == 0) ? "" : "inactive_item";
-		 //alert("row "+row+" id "+id+" field "+field+" value "+value+" " +element.attr("id"));
-		var options = {"Ok": 
-						function(){
-							$("#"+ element.attr("id")).html(html);
-							$("#"+ element.attr("id")).attr("id",new_id);
-							$("#"+ parent_id).removeClass(old_class);
-							$("#"+ parent_id).addClass(new_class);
-							
-							__changeField({"row":row,"id":id,"field":field,"value":value});
-							__closeMessage();
-						},
-						"Cancel":
-						function(){
-							__closeMessage();
-						}
-					  }
-		__showMessage({"message":"Are you sure to active this " + value_x,"options":options}); /** */
-	}); 
-}
-
 function __focus(id)
 { 
 	if(id == "first")
@@ -544,33 +466,65 @@ function __createOptionForComboBox(id, items, selected)
 	return true;
 }
 
-function next_input_action () 
+function __saveRow(params)
 {
-	var i = 0;
-	var elements = new Array();
+	var url = (params.url) ? params.url : "../../core/application/save_row.php";
+ 	url = url+"?id="+params.id+"&row="+params.row;
+	//alert(url);
+	return __sendRequest ({"url":url, "dataForm":params.dataForm,"message_loader":params.message_loader,"loader":params.loader});
+ }
+ 
+function __saveField(params)
+{
+	var id = (params.id) ? params.id : false;
+	var row = (params.row) ? params.row : false;
+	var value = (params.value) ? params.value : "0" ;
+ 	var token = (params.token) ? params.token : false;
+	var field = (params.field) ? params.field : "active";
+ 	var url = (params.url) ? params.url : "../../core/application/save_field.php";
+ 	//alert("hola");
+	return __getFileJSON(url+"?token="+token+"&id="+id+"&row="+row+"&field="+field+"&value="+value);
+ }
+ 
+ 
+function __activeAction (className) 
+{ 
 	
-	$("input[type=text], input[type=password]").each( function(id_x, anchor) {
-		elements[id_x] = anchor;
-    });
+	className = (className) ? className : "active_action" ; 
 	
-	for(var x in elements)
-	{
-		var anchor = $(elements[x]);
-		var next = $(elements[parseInt(x)+1]);
-		
-		if(next.attr("id") != undefined)
-		{
-			anchor.keydown(function(e) {
-				if(e.keyCode == 13) 
-	    	    {
-					alert(i+" ");
-	    	    	//next.focus();
-	    			return false;
-	    	    }
-			});
-			
-		}
-		i++;
-	}
-	
+	$("."+className).bind("click",function() { 
+		var element = $(this); 
+		var attr_id = element.attr("id");
+		 	attr_id = attr_id.split("-");
+		var row  	= attr_id[0];
+		var field  	= attr_id[1];
+		var id 		= attr_id[2];
+		var value 	= attr_id[3];
+		var inverse	= (value == 1) ? 0 : 1;
+		var inverse_value = (value == 1) ? "Active" : "Inactive" ; 
+		var new_id	= attr_id[0] + "-" + attr_id[1] + "-" + id + "-" + inverse; 
+		var html 	= inverse_value;
+		var parent_id =  "container-" + attr_id[0] + "-" + id;
+		var new_class = (value == 1) ? "" : "inactive_item";
+		var old_class = (value == 0) ? "" : "inactive_item";
+		 //alert("row "+row+" id "+id+" field "+field+" value "+value+" " +element.attr("id"));
+		var options = {"Ok": 
+						function(){
+							$("#"+ element.attr("id")).html(html);
+							$("#"+ element.attr("id")).attr("id", new_id);
+							$("#"+ parent_id).removeClass(old_class);
+							$("#"+ parent_id).addClass(new_class);
+							
+							__saveField({"row":row,"id":id,"field":field,"value":inverse});
+							__closeMessage();
+						},
+						"Cancel":
+						function(){
+							__closeMessage();
+						}
+					 };
+		__showMessage({"message":"Are you sure to " + inverse_value, "options":options}); /** */
+	}); 
 }
+
+  

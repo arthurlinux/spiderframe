@@ -1156,7 +1156,7 @@ class Template
 		$active = $data["values"]["Field"]["Properties"]["value"];
 		
 		$action["value"] = $value;
-		$action["class"] = "__active_action";
+		$action["class"] = "active_action";
 		$action["id"] = $params[0] . "-" . $params[1] . "-" . $id_value . "-" . $active;
 		
 		return $action;
