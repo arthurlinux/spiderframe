@@ -59,7 +59,7 @@
 					<div id="info_date"><?php echo Functions::__getFormatDate($date,"with_time")?></div>
 					<div id="secondary_nav">
 						<?php if ($_SESSION["user_login_id"]) { ?>
-							<a id="link_login" href="<?php echo TO_ROOT ?>/core/functions/logout.php"><?php echo Functions::__Translate("Logout") ?></a>
+							<a id="link_login" href="<?php echo TO_ROOT ?>/core/application/logout.php"><?php echo Functions::__Translate("Logout") ?></a>
 						<?php } else { ?>
 							<a href="<?php echo TO_ROOT ?>/apps/landing/forgot_password.php"><?php echo Functions::__Translate("Forgot your password?") ?></a>
 						<?php } ?>

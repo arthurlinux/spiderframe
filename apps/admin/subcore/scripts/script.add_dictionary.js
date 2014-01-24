@@ -32,13 +32,13 @@ function add_dictionary()
 	if(language.val() != "")
 	{
 		var dataForm = $("#dictionary_form").serialize();
-		var returnData = __sendRequest({"url": "../../core/application/add_dictionary.php", "dataForm": dataForm,"type":"POST"});	
+		var returnData = __sendRequest({"url": "../admin/subcore/application/add_dictionary.php", "dataForm": dataForm,"type":"POST"});	
 		
 		if(returnData.success == 1)
 		{ 
 			var options = {"Ok": function(){ 
 							__closeMessage();  
-							__goToPage("../admin/dictionary.php?language=" + returnData.language) } };
+							__goToPage("../admin/dictionary.php?language=" + returnData.language); } };
 			__showMessage({"message": "The dictionary has been created", "options": options });
 			return false; 
 		} else if(returnData.reason == "INVALID_TOKEN") {

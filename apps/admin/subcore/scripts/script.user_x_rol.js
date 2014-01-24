@@ -24,7 +24,7 @@ function set_rol(id, checked)
 	var attr_id 			= id.split("-"); 
 	var row  				= attr_id[0]; 
 	var cat_user_x_rol_id 	= attr_id[1];
-	var cat_user_rol_id		= attr_id[2]
+	var cat_user_rol_id		= attr_id[2];
 	var user_id 			= attr_id[3]; 
 	var active 				= attr_id[4];
 	var inverse_active 		= (active == "1") ? "0" : "1" ;
@@ -42,7 +42,7 @@ function set_rol(id, checked)
 	
 	$("#" + id).attr("id", new_id);
 	
-	var returnData = __sendRequest({"url": "../../core/application/set_rol.php", "dataForm": dataForm,"type":"GET"});
+	var returnData = __sendRequest({"url": "../admin/subcore/application/set_rol.php", "dataForm": dataForm,"type":"GET"});
 	
 	
 	if(returnData.reason == "INVALID_TOKEN") 

@@ -11,7 +11,7 @@ $(document).ready(function(){
 		var inverse_checked = (checked == true) ? false : true ;
 		
 		var options = {"Ok": function(){
-								set_permission(id,checked)
+								set_permission(id,checked);
 								__closeMessage(); 
 							 },
 					   "Cancel": function(){
@@ -30,7 +30,7 @@ $(document).ready(function(){
 		var inverse_checked = (checked == true) ? false : true ;
 		
 		var options = {"Ok": function(){
-								set_permission_by_module(id,checked)
+								set_permission_by_module(id,checked);
 								__closeMessage(); 
 							 },
 					   "Cancel": function(){
@@ -79,7 +79,7 @@ function set_permission(id,checked)
 	
 	check_for_all();
 	
-	var returnData = __sendRequest({"url": "../../core/application/edit_user_permission.php", "dataForm": dataForm,"type":"GET"});
+	var returnData = __sendRequest({"url": "../admin/subcore/application/edit_user_permission.php", "dataForm": dataForm,"type":"GET"});
 	/** */
 	if(returnData.reason == "INVALID_TOKEN") {
 		var options = {"Ok": function(){ __closeMessage(); } };
@@ -112,7 +112,7 @@ function set_permission_by_module(id,checked)
 		$("#label-" + module + "-" + this_attr_id[2]).attr("for",new_id);
 	});
 	
-	var returnData = __sendRequest({"url": "../../core/application/edit_user_permission_by_module.php", "dataForm": dataForm,"type":"GET"});
+	var returnData = __sendRequest({"url": "../admin/subcore/application/edit_user_permission_by_module.php", "dataForm": dataForm,"type":"GET"});
 	
 	if(returnData.reason == "NOT_HAS_PERMISSION") 
 	{
@@ -128,7 +128,7 @@ function check_for_all()
 {
 	$(".all_permission").each(function(_id, element){ 
 		var i 		= 0;
-		var id 		= $(element).attr("id")
+		var id 		= $(element).attr("id");
 		var attr_id = id.split("-"); 
 		var module 	= attr_id[1]; 
 		var module_checked = $("."+ module).size();
